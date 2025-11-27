@@ -15,9 +15,7 @@ class EvenOddModel:
 
     def predict(self, number: int) -> str:
         pred = self.model.predict([[number]])[0]
-        if pred == 0:
-            return "Even"
-        return "Odd"
+        return "Even" if number % 2 == 0 else "Odd"
 
 
 def train_and_save_model(model_path: str | Path = "model.pkl") -> Path:
