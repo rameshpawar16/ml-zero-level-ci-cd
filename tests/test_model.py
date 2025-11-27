@@ -13,8 +13,8 @@ def test_model_prediction():
     model = EvenOddModel()
     model.train()
 
-    assert model.predict(2) == "even"
-    assert model.predict(3) == "odd"
+    assert model.predict(2) == "Even"
+    assert model.predict(3) == "Odd"
 
 
 def test_model_file_saved(tmp_path):
